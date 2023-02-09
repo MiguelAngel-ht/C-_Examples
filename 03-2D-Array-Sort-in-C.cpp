@@ -103,10 +103,10 @@ void sort(char array[][COLMAX], int rowIn, int colIn){
 
 
 
+
 void print(const char array[][COLMAX], int rowIn, int colIn){
     for(int i=0; i<rowIn; i++){
-        printf("%s", array[i]);
-        cout << endl;
+        cout << array[i] << endl;
     }
     
 }
