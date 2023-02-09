@@ -1,10 +1,3 @@
-/* 
- * File:   main.cpp
- * Author: YOUR NAME HERE
- * Created on DATE AND TIME HERE
- * Purpose:  Sorting an array of characters if specified correctly
- */
-
 //System Libraries Here
 #include <iostream>//cout,cin
 #include <cstring> //strlen()
@@ -20,6 +13,7 @@ using namespace std;
 int  read(char []);
 void sort(char [],int);
 void print(const char [],int);
+
 
 //Program Execution Begins Here
 int main(int argc, char** argv) {
@@ -52,6 +46,7 @@ int main(int argc, char** argv) {
 }
 
 
+
 int read(char array[]){
     int sizeDet;
     
@@ -63,6 +58,7 @@ int read(char array[]){
 }
 
 
+
 void sort(char array[], int sizeIn){
     
     int aux;
@@ -72,6 +68,7 @@ void sort(char array[], int sizeIn){
     for(int i = 0; i < sizeIn; i++){
         int_array[i] = int(array[i]);
     }
+    
     
     // Bubble sort 
     for(int i = 0; i < sizeIn-1; i++){
@@ -86,6 +83,7 @@ void sort(char array[], int sizeIn){
         }   
     }
     
+    
     // casting int to char
     for (int i = 0 ; i < sizeIn; i++){
         array[i] = int_array[i];
@@ -93,6 +91,7 @@ void sort(char array[], int sizeIn){
     
     
 }
+
 
 
 void print(const char array[], int sizeIn){
