@@ -1,7 +1,4 @@
 /* 
- * File:   main.cpp
- * Author: YOUR NAME HERE
- * Created on DATE AND TIME HERE
  * Purpose:  Input something, output it reversed with some modifications
  * Note:Range should be 5 digits, 321 = 00321 reverse = 12300 before subtraction
  *      12300 - 999 = 11301 after subtraction
