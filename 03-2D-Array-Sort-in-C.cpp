@@ -1,10 +1,3 @@
-/* 
- * File:   main.cpp
- * Author: YOUR NAME HERE
- * Created on DATE AND TIME HERE
- * Purpose:  Sorting a 2-D array of characters if row and columns match
- */
-
 //System Libraries Here
 #include <iostream>//cin,cout
 #include <cstring> //strlen(),strcmp(),strcpy()
@@ -20,6 +13,8 @@ const int COLMAX = 80;          //Only 20 required, and 1 for null terminator
 int  read(char [][COLMAX], int &);           //Outputs row and columns detected from input
 void sort(char [][COLMAX], int, int);         //Sort by row
 void print(const char [][COLMAX], int, int);  //Print the sorted 2-D array
+
+
 
 //Program Execution Begins Here
 int main(int argc, char** argv) {
@@ -61,6 +56,7 @@ int main(int argc, char** argv) {
 
 
 
+
 int read(char array[][COLMAX], int &rowDet){
     int colDet = rowDet;
     
@@ -70,6 +66,7 @@ int read(char array[][COLMAX], int &rowDet){
     
     return colDet;
 }
+
 
 
 void sort(char array[][COLMAX], int rowIn, int colIn){
@@ -103,6 +100,8 @@ void sort(char array[][COLMAX], int rowIn, int colIn){
     }
 
 }
+
+
 
 void print(const char array[][COLMAX], int rowIn, int colIn){
     for(int i=0; i<rowIn; i++){
