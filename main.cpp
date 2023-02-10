@@ -1,13 +1,3 @@
-/* 
- * File:   main.cpp
- * Author: YOUR NAME HERE
- * Created on DATE AND TIME HERE
- * Purpose:  Even, Odd Vectors and Array Columns Even, Odd
- * Note:  Check out content of Sample conditions in Hacker Rank
- * Input size of integer array, then array, output columns of Even, Odd
- * Vectors then Even, Odd 2-D Array
- */
-
 //System Libraries Here
 #include <iostream>//cin,cout
 #include <vector>  //vectors<>
