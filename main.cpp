@@ -5,7 +5,6 @@
 using namespace std;
 
 //User Libraries Here
-#include <string>
 
 //Global Constants Only, No Global Variables
 //Allowed like PI, e, Gravity, conversions, array dimensions necessary
