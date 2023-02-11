@@ -1,10 +1,3 @@
-/* 
- * File:   main.cpp
- * Author: YOUR NAME HERE
- * Created on DATE AND TIME HERE
- * Purpose:  Sum Rows, Sum Columns, Grand Sum of an integer array
- */
-
 //System Libraries Here
 #include <iostream>//cin,cout
 #include <iomanip> //setw(10)
