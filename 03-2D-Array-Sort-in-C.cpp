@@ -1,19 +1,20 @@
 //System Libraries Here
-#include <iostream>//cin,cout
-#include <cstring> //strlen(),strcmp(),strcpy()
+#include <iostream>             // cin, cout
+#include <cstring>              // strlen(), strcmp(), strcpy()
 using namespace std;
 
 //User Libraries Here
+
 
 //Global Constants Only, No Global Variables
 //Allowed like PI, e, Gravity, conversions, array dimensions necessary
 const int COLMAX = 80;          //Only 20 required, and 1 for null terminator
 
+
 //Function Prototypes Here
 int  read(char [][COLMAX], int &);           //Outputs row and columns detected from input
 void sort(char [][COLMAX], int, int);         //Sort by row
 void print(const char [][COLMAX], int, int);  //Print the sorted 2-D array
-
 
 
 //Program Execution Begins Here
@@ -46,7 +47,7 @@ int main(int argc, char** argv) {
         cout << (rowDet < rowIn ? "Row Input size less than specified.":
             "Row Input size greater than specified.") << endl;
         if(colDet != colIn)
-        cout << (colDet < colIn?"Column Input size less than specified.":
+        cout << (colDet < colIn ? "Column Input size less than specified.":
             "Column Input size greater than specified.") << endl;
     }
     
@@ -56,63 +57,57 @@ int main(int argc, char** argv) {
 
 
 
-
 int read(char array[][COLMAX], int &rowDet){
-    int colDet = rowDet;
     
-    for(int i=0; i<rowDet; i++){
+    int i = 0;
+    int colDet = 0;
+    
+    while(i < rowDet){
+        
         cin >> array[i];
+        
+        if(strlen(array[i]) > colDet){
+            colDet = strlen(array[i]);
+        }
+        
+        i++;
     }
     
     return colDet;
 }
 
 
-
 void sort(char array[][COLMAX], int rowIn, int colIn){
+
+    char aux[colIn];
+    int max;
     
-    int int_array[rowIn][colIn];
-    
-    // casting char to int
-    for(int i=0; i<rowIn; i++){
-        for(int j=0; j<colIn; j++){
-            int_array[i][j] = int(array[i][j]);
-        }
-    }
-    
-    for (int ia=0; ia < rowIn; ia++)
-      for (int ja=0; ja < rowIn; ja++)
-        for (int i=0; i < colIn; i++)
-          
-            if(int_array[ia][i] < int_array[ja][i])
+    for(int i = 0; i < rowIn; i++) 
+    {
+        for(int j = i+1; j < rowIn; j++)
+        {
+            if(strcmp(array[i], array[j]) > 0) 
             {
-                int aux = int_array[ia][i];
-                int_array[ia][i] = int_array[ja][i];
-                int_array[ja][i] = aux;
+                strcpy(aux, array[i]);
+                strcpy(array[i], array[j]);
+                strcpy(array[j], aux);   
             }
-            
-            
-    // casting int to char
-    for(int i=0; i<rowIn; i++){
-        for(int j=0; j<colIn; j++){
-            array[i][j] = int_array[i][j];
-        }
+       }
     }
+            
 
 }
-
-
-
 
 void print(const char array[][COLMAX], int rowIn, int colIn){
+    
     for(int i=0; i<rowIn; i++){
-        cout << array[i] << endl;
+        for(int j=0; j<strlen(array[i]); j++){
+            cout << array[i][j];    
+        }
+        cout  << endl;
+        
     }
     
 }
-
-
-
-
 
 
