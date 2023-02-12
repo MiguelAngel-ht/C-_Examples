@@ -1,3 +1,3 @@
-# C-_Examples
+# C++ Examples
 
-Things in C++
+Things in C++.
