@@ -1,3 +1,3 @@
 # C++ Examples
 
-Things in C++.
+Simple examples in C++.
