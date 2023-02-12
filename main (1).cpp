@@ -1,10 +1,3 @@
-/* 
- * Purpose:  Searching for multiple occurrence of patterns
- * Note:  cout proceeds to null terminator, cin reads to end of line
- *        for character arrays
- * 
- */
-
 //System Libraries Here
 #include <iostream>         //cin,cout,getline()
 #include <cstring>          //strlen()
